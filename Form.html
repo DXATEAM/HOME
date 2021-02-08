@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+input {
+    -webkit-appearance: none;
+}
+
+.form {
+    width: 370px;
+    margin: 0 auto;
+    padding: 10px;
+    /*border: 1px solid black;*/
+}
+.form .header {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 50px 0;
+}
+.form form label.input {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #E2E2E2;
+    border-radius: 3px;
+    position: relative;
+    transition: border 0.3s;
+    -webkit-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+}
+.form form label.input:hover {
+    border: 2px solid DarkGray;
+}
+.form form label.input label.placeholder {
+    position: absolute;
+    line-height: 46px;
+    left: 15px;
+    cursor: text;
+    top: 0px;
+    color: #828282;
+    transition: font-size 0.3s, line-height 0.3s, left 0.3s;
+    -webkit-transition: font-size 0.3s, line-height 0.3s, left 0.3s;
+    -o-transition: font-size 0.3s, line-height 0.3s, left 0.3s;
+    -moz-transition: font-size 0.3s, line-height 0.3s, left 0.3s;
+}
+.form form label.input.focus label.placeholder {
+    font-size: 9px;
+    line-height: 18px;
+    left: 5px;
+}
+.form form label.input input {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+}
+.form form > input[type=submit] {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: #3599F6;
+    color: white;
+    padding: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+}
+.form form > input[type=submit]:hover {
+    background-color: #2B7BC6;
+}
+@media (max-width: 370px) {
+    .form {
+        width: 100%;
+    }
+}
+.form .footer {
+    display: block;
+    padding-top: 10px;
+}
+.form .footer {
+    font-size: 12px;
+}
+.form .footer a {
+    font-size: 12px;
+    text-decoration: none;
+    padding-left: 3px;
+}
+.form .footer a:hover {
+    text-decoration: underline;
+}
+.error {
+    padding: 7px;
+    font-size: 13px;}
+.form img.back {
+position:relative;
+     height:70px;
+        width:70px;
+        text-align:Center;
+      margin-left: 145px;
+    margin-right: 50px;
+    background:white;
+    border-radius:5%;
+    border:2px solid #333;
+    top:50%;
+    bottom:50%;
+     }
+</style>
+</head>
+<body>
+
+<div class="form">
+<img class="back" src="https://png.pngtree.com/element_our/md/20180506/md_5aeee50119d61.jpg">
+    <a href="#" class="header">Contact</a>
+    <form action="insert.php" method="post">
+        <p class="error" style="text-align: center;"></p>
+        <label for="email" class="input">
+            <label class="placeholder" for="email">Name</label>
+            <input type="text" name="name">
+        </label>
+         <label class="input">
+            <label class="placeholder">Mobile</label>
+            <input type="number" name="mobile">
+        </label>
+        <input type="submit" name="submit" value="Send">
+    </form>
+</div>
+<script>
+$(document).ready(function(){
+    $(".form form > .input > input").each(function(index) {
+        if($.trim($(this).val()).length != 0) {
+            $(this).parent().addClass("focus");
+        }
+    })
+})
+$(".form form > .input > input").on("focus blur", function(){
+    if($.trim($(this).val()).length == 0) {
+        $(this).parent().toggleClass("focus");
+    }
+})
+</script>
+</body>
+</html>

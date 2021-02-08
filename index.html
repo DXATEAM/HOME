@@ -1,0 +1,330 @@
+<! - - DXA TEAM- - >
+<!DOCTYPE html>
+<html id="s">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1>
+         <title>DXATeam</title>
+    <link rel="icon" href="" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Nunito&display=swap" rel="stylesheet">
+    <style>
+
+#mycontent{
+    text-align: center;
+    padding-top: 20%;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+    align-items: stretch; 
+}
+body{
+    background-image: url("https://data.whicdn.com/images/263598758/original.gif");
+    background-position: float ;
+    background-attachment:fixed;
+    background-repeat: no-repeat;                     
+    background-size: contain;
+    background-color:black;
+    item_align:center;
+    text_align:center;
+    
+
+}
+
+
+#hone{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+       align-items: Center; 
+}
+#hfour{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+       align-items: center ; 
+}
+.contentim{
+    width: 100%;
+    height: 300px;
+       align-items: center ; 
+}
+.hfour2{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size:2em;
+    text-align:center;
+       align-items: stretch; 
+
+}
+.him{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    color: white;
+    text-align:center;
+       align-items: stretch; 
+}
+ul,li{
+color:white;
+font-size:20;
+   align-items: stretch; 
+}
+#snackbar{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 60%;
+  bottom : 30px;
+  font-size: 15px;
+  border-radius:20px;
+  border:2px solid #F0FFFF;
+  font-family:'Montserrat', sans-serif;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom : 0px; opacity: 0;} 
+  to {bottom : 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom : 0px; opacity: 0;}
+  to {bottom : 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom : 30px; opacity: 1;} 
+  to {bottom : 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom : 30px; opacity: 1;}
+  to {bottom : 0; opacity: 0;}
+}
+img.snack{
+height:60px;
+width:60px;
+border-radius:20px;
+border: 2px solid #F0FFFF;
+}
+iframe{
+text_align:center;
+} 
+table{
+text-align :left;
+}
+.thumbnail{
+display:Block;
+margin-left: auto;
+  margin-right: auto;
+  text-align :center;
+}
+.col-lg-6 col-md-6 col-sm-12{
+display:Block;
+margin-left: auto;
+  margin-right: auto;
+  text-align :center;
+
+}
+    </style>
+    </head>
+    <script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   <body onload="myFunction()">
+
+<div id="snackbar"><img class="snack" src="https://i.pinimg.com/originals/3b/da/96/3bda96cddb2889f6774c7e3384dfba47.gif">
+Contact us for more..
+   </div>
+   
+   
+   
+        <nav class="navbar navbar-inverse navbar-fixed-top" onclick="myFunction()">
+                <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><i class="fas fa-plus"></i> <i class="fas fa-times"></i> DXA </a>
+                  </div>
+              
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                  
+
+                      <li><a href="author.html">Author </a></li>
+                     
+               
+                          <li><a href="Form.html">SIGN TRIAL</a></li>
+                   </ul>
+                    
+                    
+                  </div>
+ <!-- /.navbar-collapse -->
+                </div>
+ <!-- /.container-fluid -->
+              </nav>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div id="mycontent">
+                        <h1 id="hone"><i class="fas fa-plus"></i> <i class="fas fa-times"></i> </br> Digital</br>eXclusive </br>Advert </h1>
+                        <hr>
+                        <h4 id="hfour">Social advertising platform </h4>
+
+                  </div>
+                  
+              </div>
+          </div>
+          <hr>
+  <table border="0">
+  <tr>
+  <td>
+          <h4 class="hfour2">Photos:</h4>
+  </td>
+  </tr>
+  <tr>
+  <td>
+<!-- logosale start-->          
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12"onclick="myFunction()"><div class="thumbnail">
+              
+  <img class="mySlides" src="https://static-cdn.jtvnw.net/jtv_user_pictures/deb5eee8-83cc-4179-adaf-da37a1d8c904-profile_banner-480-960x480.jpeg");
+   " style="width:100%">
+  <img class="mySlides" src="https://i.ibb.co/2y3HYZ5/Capture-2020-07-21-10-02-16.jpg"style=" width:100%">
+</div></div>
+</td>
+  </tr>
+  <tr>
+  <td>
+<ul>
+             <h4 id="hfour">Background-stage logo</br> Rs 200-250</h4>
+      
+        </ul>
+              </td>
+  </tr>
+  <tr>
+  <td>
+<!-- logosale end-->
+<!-- videosale start-->     
+                  <div class="col-lg-6 col-md-6 col-sm-12"onclick="myFunction"><div class="thumbnail"><img class="myslides" src="https://i.imgur.com/oucKHUw.jpg" alt="" class="contentim">
+                  <img class="myslides" src="https://cp1.biz.nf/file-manager/readFileContents?fileName=SVID.GIF&filePath=%2Fdxateam.c1.biz%2FSVID.GIF&direct=yes" >
+                  </div></div>
+              </td>
+  </tr>
+  <tr>
+  <td>
+              <ul>
+              
+              <h4 id="hfour">Intro & outro video</br>one sample below</br>Rs 200-300</h4>
+              
+              </ul>
+              </td>
+  </tr>
+  <tr>
+  <td>
+<!-- videosale end-->
+<!-- Animationsale start-->
+              <div class="col-lg-6 col-md-6 col-sm-12"onclick="myFunction()"><div class="thumbnail"><img src="https://i.imgur.com/0xJBtEe.jpg" alt="" class="contentim"></div></div>
+      </td>
+  </tr>
+  <tr>
+  <td>
+      <ul>
+    
+    
+             <h4 id="hfour">Animation Clip</br>The price will depend here.</h4>
+              </div>
+      
+       </ul>
+         </td>
+  </tr>
+  <tr>
+  <td>
+<!-- Animationsale end-->          
+      </td>
+  </tr>
+  <tr>
+  <td>             <!-- videoshow -->    
+          <h4 class="hfour2">Videos:</h4>
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12"><div class="thumbnail">
+              <iframe title="vimeo-player" src="https://player.vimeo.com/video/427761525?autoplay=1&loop=1&autopause=1" width="320" height="195" frameborder="0" allow="autoplay"allowfullscreen></iframe>
+              </div></div>
+                   <!-- videoshow End --> 
+      </td>
+  </tr>
+  <tr>
+  <td> 
+          <h4 class="hfour2">About
+          </h4>
+          </td>
+  </tr>
+  <tr>
+  <td>
+          <p class="him">This platform was created to help individuals and businesses  
+          who are new, in getting socialized in the market. </p>
+          </td>
+  </tr>
+  <tr>
+  <td>
+          <p class="him">1.creating a base  fandom in social networks and populate the product or service. </p>
+</td>
+  </tr>
+  <tr>
+  <td>
+          <p class="him">2.The animation are mostly for businesses and content creators.But individuals who want to have an animation would have to tag the Author so as to pass the copyright section.</p>
+         
+      </div>
+      </td>
+  </tr>
+  </table>
+      <audio id="myAudio">
+        <source src="https://www.dropbox.com/s/x2oicgmu6bb7yg8/Woosh-E4-www.fesliyanstudios.com.mp3?dl=0" type="audio/mp3">
+      </audio>
+      <script>function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+document.getElementById("myAudio").play();
+alert("The page is better on mobile phones. Windows version is to be available very soon.") 
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+   </body>
+</html>
